@@ -1,0 +1,90 @@
+<doctybe html> 
+    <head>
+        <meta charset="utf-8" />
+        <title >fatafet</title>
+        <meta name="description" content="to be able to know the famous food in some countries"/>
+        <link rel="stylesheet" href="css/stylt.css">
+    </head>
+    <body>  
+        <script>
+        function validation()                                    
+    { 
+        var email = document.forms["login-form"]["email"];  
+        var password = document.forms["login-form"]["psw"];    
+    
+        console.log(email.value);
+        console.log(password.value);
+    
+    
+        if (email.value == "")                                   
+        { 
+            window.alert("Please enter a valid e-mail address."); 
+    
+            return false; 
+        } 
+        if (email.value.indexOf("@", 0) < 0)                 
+        { 
+            window.alert("Please enter a valid e-mail address."); 
+            return false; 
+        } 
+        if (email.value.indexOf(".", 0) < 0)                 
+        { 
+            window.alert("Please enter a valid e-mail address."); 
+            return false; 
+        } 
+        if(email.value=='admin@gamail.com' && password.value=='admin'){
+        // window.alert("Welcome Admin ");
+        window.location.href="admin.html"
+        return true;
+        }
+        else{
+                    // window.alert("not admin");
+                    window.location.href="index.html"
+        return false;
+        }
+        
+    }</script> 
+             
+        <div class="login-page">
+            <div class="form">
+                <form class="register-form"name="form1" onsubmit="return validation();">
+                    <input type="text" placeholder="username"/>
+                    <input type="text" placeholder="password"/>
+                    <input type="email" placeholder="email"/>
+                    <input type="text" placeholder="phone number"/>
+                     <button class="mubtn">create</button> 
+                    <!-- <a href="index.html">create</a> -->
+                     <p class="message">already registered?
+                          <a href="#">login</a> 
+                    </p>
+                </form>
+                <form class="login-form"name="login-form" onsubmit="return validation();">
+                    <input type="text" placeholder="username"/>  
+                    <input type="text" placeholder="password"/>
+                    <button id="butin">login</button>
+                     <script>document.getElementById("butin").addEventListener("click",()=>{
+                        window.location.href("index.html")
+                    })
+                    </script> 
+                     
+                    <p class="message">not registered?
+                        <a href="#">register</a>
+                    </p>
+                </form>
+            </div>
+        </div>
+          <script src='https://code.jquery.com/jquery-3.2.1.min.js'></script> 
+        <script>
+            $('.message a').click(function(){
+            $('form').animate({height:"toggle",opacity:"toggle"},"slow");
+        });
+        </script>
+          <script>
+            document.getElementById("mubtn").addEventListener("click", myFunction);
+            function myFunction() {
+              window.location.href="index.html";
+            }
+           </script> 
+         
+    </body>
+    </html>

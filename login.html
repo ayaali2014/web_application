@@ -1,0 +1,161 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>login</title>
+    <link rel="stylesheet" href="css/login.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&display=swap" rel="stylesheet">
+</head>
+<script> 
+    function validation()                                    
+    { 
+        var email = document.forms["form1"]["email"];  
+        var password = document.forms["form1"]["psw"];    
+    
+        console.log(email.value);
+        console.log(password.value);
+    
+    
+        if (email.value == "")                                   
+        { 
+            window.alert("Please enter a valid e-mail address."); 
+    
+            return false; 
+        } 
+        if (email.value.indexOf("@", 0) < 0)                 
+        { 
+            window.alert("Please enter a valid e-mail address."); 
+            return false; 
+        } 
+        if (email.value.indexOf(".", 0) < 0)                 
+        { 
+            window.alert("Please enter a valid e-mail address."); 
+            return false; 
+        } 
+        if(email.value=='admin@gamail.com' && password.value=='admin'){
+        // window.alert("Welcome Admin ");
+        window.location.href="admin.html"
+        return true;
+        }
+        else{
+                    // window.alert("not admin");
+                    window.location.href="index.html"
+        return false;
+        }
+        
+    }</script> 
+        
+        
+<body>
+    <div class="title">Fatafeet</div >
+    <div class="one"> 
+        <h3>login</h3>
+        <form  class="form1" name="form1" onsubmit="return validation();">
+        <div class="two">
+            <label for="email">Email</label>
+            <input id="email" type="email" required placeholder="enter your email" name="email">
+            <br>
+            <br>
+            <label for="password">password</label>
+            <input id="password" type="password" required placeholder=" enter your password" name="psw">
+            <br>
+            <br>
+            <button type="submit">Submit</button>
+        </div>
+        </form>
+        <br>
+        <hr>
+        <br>
+        <h3>register</h3>
+        <div class="three">
+            <label for="fname">first name</label>
+            <input id="fname" type="text" required placeholder="enter your first name" name="first name">
+            <br>
+            <br>
+            <label for="sname">second name</label>
+            <input id="sname" type="text" required placeholder="enter your second name" name="secocd name">
+            <br>
+            <br>
+            <label for="num">number phone</label>
+            <input id="num" type="number" name="number">
+            <br>
+            <br>
+            <label for="birthdate">your birthdate</label>
+            <input id="birthdate" type="date" name="month">
+            <br>
+            <br>
+            <br><b>your gender</b></br>
+            <div class="male">
+                <label for="male">male</label>
+                <input id="male" type="radio" name="male" value="male"> 
+            </div>
+            <div class="female">
+                <label for="female">female</label> 
+                <input id="female" type="radio" name="female" value="female">
+            </div>
+            <br>
+            <br>
+            <label for="nemail">enter email</label>
+            <input id="nemail" type="email" required placeholder="enter email" name="email">
+            <br>
+            <br>
+            <label for="nnemail">enter email again</label>
+            <input id="nnemail" type="email" name="email">
+            <br>
+            <br>
+            <label for="pass">enter new password</label>
+            <input id="pass" type="password" required placeholder="enter complex password" name="newpassword">
+            <br>
+            <br>
+            <label for="npass">enter password again</label>
+            <input id="npass" type="password" name="newpassword">
+            <br>
+            <br>
+            <input type="reset"   value="reset">
+            <input type="submit"  onClick="myfunction()"/>
+            <script>
+            function myfunction() {
+                window.location.href="index.html"
+            }
+            </script>
+
+
+        </div>
+    
+    
+    
+    </div>
+    
+    <script src="login.js"></script>
+</body>
+</html>
+              
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
