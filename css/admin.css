@@ -26,22 +26,21 @@ body{
     padding: 20px;
     margin: 40px;
 }
-.colors#drop-nav div{
-border-radius: 50%;
-}
-#red{
+.color-swatch{
+    border-radius: 50%;
     width: 45px;
     height: 45px;
+    border: 2px solid #eee;
+    cursor: pointer;
+    padding: 0;
+}
+#red{
     background: red;
 }
 #blue{
-    width: 45px;
-    height: 45px;
     background: blue;
 }
 #green{
-    width: 45px;
-    height: 45px;
     background: green;
 }
 ul{
@@ -55,7 +54,7 @@ ul li{
     position: relative;
     float: left;    
 }
-li lu{
+li ul{
     display: none;
 }
 ul li a{

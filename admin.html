@@ -2,33 +2,23 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Admin</title>
     <link rel="stylesheet" href="css/admin.css">
-    <script type="">
-        function red(){
-            document.body.style.backgroundColor= "red" ;
-        }function blue(){
-            document.body.style.backgroundColor= "blue" ;
-        }function green(){
-            document.body.style.backgroundColor= "green" ;
-        }
-        
-        </script>
 </head>
 <body>
     <div class="title"><p>Admin page</p></div>
-    <div class="colors"> 
+    <div class="colors">
         <ul id="drop-nav">
             <li><h4>colors</h4>
                 <ul>
-                    <li><a><div id="red" onclick="red()"></div></a></li>
-                    <li><a><div id="blue" onclick="blue()"></div></a></li>
-                    <li><a><div id="green" onclick="green()"></div></a></li>
+                    <li><button type="button" id="red" class="color-swatch" aria-label="Set background to red"></button></li>
+                    <li><button type="button" id="blue" class="color-swatch" aria-label="Set background to blue"></button></li>
+                    <li><button type="button" id="green" class="color-swatch" aria-label="Set background to green"></button></li>
                 </ul>
             </li>
         </ul>
-        
     </div>
-</div>
+    <script src="js/admin.js"></script>
 </body>
 </html>
